@@ -1,0 +1,82 @@
+
+PLAY [cm] **********************************************************************
+
+TASK [hudecof.test : set os specific variables] ********************************
+ok: [ditlcm05] => (item=/Users/hudecof/devel/github/ansible_roles/roles/hudecof.test/vars/os-CentOS.yml)
+ok: [ditlcm03] => (item=/Users/hudecof/devel/github/ansible_roles/roles/hudecof.test/vars/os-Ubuntu.yml)
+ok: [ditlcm04] => (item=/Users/hudecof/devel/github/ansible_roles/roles/hudecof.test/vars/os-Ubuntu.yml)
+ok: [ditlcm01] => (item=/Users/hudecof/devel/github/ansible_roles/roles/hudecof.test/vars/os-Debian.yml)
+ok: [ditlcm02] => (item=/Users/hudecof/devel/github/ansible_roles/roles/hudecof.test/vars/os-Debian.yml)
+ok: [ditlcm06] => (item=/Users/hudecof/devel/github/ansible_roles/roles/hudecof.test/vars/os-CentOS.yml)
+ok: [ditlcm07] => (item=/Users/hudecof/devel/github/ansible_roles/roles/hudecof.test/vars/os-RedHat.yml)
+ok: [ditlcm08] => (item=/Users/hudecof/devel/github/ansible_roles/roles/hudecof.test/vars/os-RedHat.yml)
+
+TASK [hudecof.test : run os specific tasks] ************************************
+included: /Users/hudecof/devel/github/ansible_roles/roles/hudecof.test/tasks/task_01-debian.yml for ditlcm01, ditlcm03, ditlcm04, ditlcm02
+included: /Users/hudecof/devel/github/ansible_roles/roles/hudecof.test/tasks/task_02.yml for ditlcm01, ditlcm03, ditlcm04, ditlcm05, ditlcm06, ditlcm07, ditlcm08, ditlcm02
+included: /Users/hudecof/devel/github/ansible_roles/roles/hudecof.test/tasks/task_01-centos.yml for ditlcm05, ditlcm06, ditlcm07, ditlcm08
+
+TASK [hudecof.test : task 01] **************************************************
+ok: [ditlcm01] => {
+    "msg": "debug message for Debian 7.11"
+}
+ok: [ditlcm02] => {
+    "msg": "debug message for Debian 8.7"
+}
+ok: [ditlcm03] => {
+    "msg": "debug message for Ubuntu 14.04"
+}
+ok: [ditlcm04] => {
+    "msg": "debug message for Ubuntu 16.04"
+}
+
+TASK [hudecof.test : task 02] **************************************************
+ok: [ditlcm03] => {
+    "msg": "debug message for Ubuntu 14.04"
+}
+ok: [ditlcm04] => {
+    "msg": "debug message for Ubuntu 16.04"
+}
+ok: [ditlcm02] => {
+    "msg": "debug message for Debian 8.7"
+}
+ok: [ditlcm05] => {
+    "msg": "debug message for CentOS 6.8"
+}
+ok: [ditlcm01] => {
+    "msg": "debug message for Debian 7.11"
+}
+ok: [ditlcm06] => {
+    "msg": "debug message for CentOS 7.3.1611"
+}
+ok: [ditlcm07] => {
+    "msg": "debug message for RedHat 6.9"
+}
+ok: [ditlcm08] => {
+    "msg": "debug message for RedHat 7.3"
+}
+
+TASK [hudecof.test : task 01] **************************************************
+ok: [ditlcm05] => {
+    "msg": "debug message for CentOS 6.8"
+}
+ok: [ditlcm06] => {
+    "msg": "debug message for CentOS 7.3.1611"
+}
+ok: [ditlcm07] => {
+    "msg": "debug message for RedHat 6.9"
+}
+ok: [ditlcm08] => {
+    "msg": "debug message for RedHat 7.3"
+}
+
+PLAY RECAP *********************************************************************
+ditlcm01                   : ok=5    changed=0    unreachable=0    failed=0   
+ditlcm02                   : ok=5    changed=0    unreachable=0    failed=0   
+ditlcm03                   : ok=5    changed=0    unreachable=0    failed=0   
+ditlcm04                   : ok=5    changed=0    unreachable=0    failed=0   
+ditlcm05                   : ok=5    changed=0    unreachable=0    failed=0   
+ditlcm06                   : ok=5    changed=0    unreachable=0    failed=0   
+ditlcm07                   : ok=5    changed=0    unreachable=0    failed=0   
+ditlcm08                   : ok=5    changed=0    unreachable=0    failed=0   
+
