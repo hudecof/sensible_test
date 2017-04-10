@@ -1,0 +1,4 @@
+---
+test_tasks:
+  - task_01-centos.yml
+  - task_02.yml

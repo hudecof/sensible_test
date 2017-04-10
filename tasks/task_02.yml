@@ -1,0 +1,4 @@
+---
+- name: task 02
+  debug:
+    msg: debug message for {{ ansible_distribution }} {{ ansible_distribution_version }}
