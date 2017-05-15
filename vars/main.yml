@@ -1,2 +1,6 @@
 ---
 # vars file for hudecof.test
+test_tasks_available:
+  - task_01-debian.yml
+  - task_01-centos.yml
+  - task_02.yml

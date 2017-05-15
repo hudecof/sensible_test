@@ -1,4 +1,4 @@
 ---
-- name: task 01
+- name: task 01 | centos
   debug:
     msg: debug message for {{ ansible_distribution }} {{ ansible_distribution_version }}

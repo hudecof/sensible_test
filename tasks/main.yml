@@ -12,6 +12,7 @@
 
 - name: "run os specific tasks"
   include: "{{ task_item }}"
-  with_items: "{{ test_tasks }}"
+  with_items: "{{ test_tasks_available }}"
   loop_control:
     loop_var: task_item
+  when: task_item in test_tasks
